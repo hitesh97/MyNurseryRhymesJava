@@ -15,7 +15,7 @@
   -->
 
 <resources>
-    <string name="app_name">My Nursery Rhymes</string>
+    <string name="app_name">Nursery Rhymes</string>
     <string name="alternate_title">My Nursery Rhymes</string>
     <string name="toggle_title">Toggle title</string>
 
