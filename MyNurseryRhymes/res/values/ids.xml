@@ -20,6 +20,6 @@
     <item type="id" name="actionbar_compat_item_refresh_progress" />
     <item type="id" name="actionbar_compat_item_refresh" />
     <item type="id" name="menu_refresh" />
-    <item type="id" name="text" />
-    <item type="id" name="image" />
+    <item type="id" name="itemText" />
+    <item type="id" name="itemImage" />
 </resources>

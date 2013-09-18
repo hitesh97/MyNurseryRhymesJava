@@ -80,9 +80,9 @@ public class MainActivity extends ActionBarActivity {
         list.setAdapter(adapter);
         list.setOnItemClickListener(new OnItemClickListener(){
         	public void onItemClick(AdapterView<?> myAdapter, View myView, int myItemInt, long mylng) {
-        		//String videoName = ((TextView) myView.findViewById(R.id.text)).getText().toString();
+        		//String videoName = ((TextView) myView.findViewById(R.id.itemText)).getText().toString();
         		//Toast.makeText(getApplicationContext(), "item selected... : "+ videoId, Toast.LENGTH_SHORT).show();
-        		String videoId = ((ImageView) myView.findViewById(R.id.image)).getTag().toString();
+        		String videoId = ((ImageView) myView.findViewById(R.id.itemImage)).getTag().toString();
         		Toast.makeText(getApplicationContext(), "item selected... : "+ videoId, Toast.LENGTH_SHORT).show();
         	}
         	

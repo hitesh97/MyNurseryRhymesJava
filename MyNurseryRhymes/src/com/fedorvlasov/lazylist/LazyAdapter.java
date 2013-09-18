@@ -56,10 +56,10 @@ public class LazyAdapter extends BaseAdapter {
         String sampleUrl = youtubeSampleUrl;
         String imageUrl = sampleUrl.replace("{0}", itemMap.getName()) ;
         
-        TextView text=(TextView)vi.findViewById(R.id.text);;
+        TextView text=(TextView)vi.findViewById(R.id.itemText);;
         text.setText(itemMap.getValue());
         
-        ImageView image=(ImageView)vi.findViewById(R.id.image);
+        ImageView image=(ImageView)vi.findViewById(R.id.itemImage);
         image.setTag(itemMap.getName());
         imageLoader.DisplayImage(imageUrl, activity, image);
 

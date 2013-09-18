@@ -4,11 +4,11 @@
   android:layout_width="fill_parent"
   android:layout_height="wrap_content">
   <ImageView
-  	  android:id="@+id/image"
+  	  android:id="@+id/itemImage"
 	  android:layout_width="100dip"
 	  android:layout_height="100dip" android:src="@drawable/stub" android:scaleType="centerCrop"/>
   <TextView
-  	  android:id="@+id/text"
+  	  android:id="@+id/itemText"
   	  android:layout_width="0dip"
 	  android:layout_height="wrap_content"
 	  android:layout_weight="1" android:layout_gravity="left|center_vertical" android:textSize="20sp" android:layout_marginLeft="10dip"/>

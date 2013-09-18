@@ -60,12 +60,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int actionbar_compat_item_refresh=0x7f060003;
         public static final int actionbar_compat_item_refresh_progress=0x7f060002;
         public static final int actionbar_compat_title=0x7f060001;
-        public static final int image=0x7f060006;
+        public static final int itemImage=0x7f060006;
+        public static final int itemText=0x7f060005;
         public static final int listRhymes=0x7f060007;
         public static final int menu_refresh=0x7f060004;
         public static final int menu_search=0x7f060008;
         public static final int menu_share=0x7f060009;
-        public static final int text=0x7f060005;
     }
     public static final class layout {
         public static final int actionbar_compat=0x7f030000;
