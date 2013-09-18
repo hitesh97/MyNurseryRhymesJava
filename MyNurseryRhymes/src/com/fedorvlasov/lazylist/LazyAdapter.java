@@ -1,6 +1,9 @@
 package com.fedorvlasov.lazylist;
 
 //import android.R;
+import java.util.List;
+import java.util.Map;
+import org.apache.http.message.BasicNameValuePair;
 import com.Akruti.Android.NurseryRhymes.R;
 
 import android.app.Activity;
@@ -14,12 +17,17 @@ import android.widget.TextView;
 
 public class LazyAdapter extends BaseAdapter {
     
+	private String youtubeSampleUrl = "http://img.youtube.com/vi/{0}/default.jpg";
+	
     private Activity activity;
-    private String[] data;
+    //private String[] data;
+    private List<BasicNameValuePair> data;
     private static LayoutInflater inflater=null;
     public ImageLoader imageLoader; 
     
-    public LazyAdapter(Activity a, String[] d) {
+    //List<Map<String, String>>
+    //public LazyAdapter(Activity a, String[] d) {
+    public LazyAdapter(Activity a, List<BasicNameValuePair> d) {
         activity = a;
         data=d;
         inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -27,7 +35,8 @@ public class LazyAdapter extends BaseAdapter {
     }
 
     public int getCount() {
-        return data.length;
+        //return data.length;
+    	return data.size();
     }
 
     public Object getItem(int position) {
@@ -43,10 +52,16 @@ public class LazyAdapter extends BaseAdapter {
         if(convertView==null)
             vi = inflater.inflate(R.layout.item, null);
 
+        BasicNameValuePair itemMap = (BasicNameValuePair)data.get(position);
+        String sampleUrl = youtubeSampleUrl;
+        String imageUrl = sampleUrl.replace("{0}", itemMap.getName()) ;
+        
         TextView text=(TextView)vi.findViewById(R.id.text);;
+        text.setText(itemMap.getValue());
+        
         ImageView image=(ImageView)vi.findViewById(R.id.image);
-        text.setText("item "+position);
-        imageLoader.DisplayImage(data[position], activity, image);
+        imageLoader.DisplayImage(imageUrl, activity, image);
+
         return vi;
     }
 }

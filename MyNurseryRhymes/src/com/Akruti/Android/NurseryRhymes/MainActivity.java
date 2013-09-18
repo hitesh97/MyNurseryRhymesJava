@@ -17,6 +17,9 @@
 package com.Akruti.Android.NurseryRhymes;
 
 import java.util.*;
+
+import org.apache.http.message.BasicNameValuePair;
+
 import com.Akruti.Android.NurseryRhymes.R;
 import com.fedorvlasov.lazylist.LazyAdapter;
 
@@ -28,6 +31,10 @@ import android.view.View;
 import android.widget.*;
 
 public class MainActivity extends ActionBarActivity {
+	private List<BasicNameValuePair> itemData = new ArrayList<BasicNameValuePair>();
+	//BasicNameValuePair pairs = new BasicNameValuePair("","");
+	
+	
     private boolean mAlternateTitle = false;
     LazyAdapter adapter;
     ListView list;
@@ -35,9 +42,40 @@ public class MainActivity extends ActionBarActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        
 
+
+        itemData.add(new BasicNameValuePair("K3YQsmznd4c", "A B C D E F G"));
+        itemData.add(new BasicNameValuePair("gBEHFFnV3RY", "Baa Baa Black Sheep"));
+        itemData.add(new BasicNameValuePair("Bhz2ycHGITw", "Diddle, Diddle, Dumpling, My Son John"));
+        itemData.add(new BasicNameValuePair("iqn7Qm3h1u0", "Doctor Foster went to Gloucester"));
+        itemData.add(new BasicNameValuePair("yyl8n-dzIk8", "Eeny, Meeny, Miny, Moe"));
+        itemData.add(new BasicNameValuePair("SVPmtaHmL4g", "Five Little Speckeled Frog"));
+        itemData.add(new BasicNameValuePair("_RQDTNrC6lQ", "Hey Diddle Diddle"));
+        itemData.add(new BasicNameValuePair("UneYkq0FzKA", "Humpty Dumpty"));
+        itemData.add(new BasicNameValuePair("oODul5hgIl4", "Hot Cross Buns"));
+        itemData.add(new BasicNameValuePair("icUSwG83ES8", "It's Raining, It's Pouring"));
+        itemData.add(new BasicNameValuePair("MBxeKG7_Hq4", "Incy Wincy Spider"));
+        itemData.add(new BasicNameValuePair("lsbFIYSK26E", "Jack And Jill, Went Up The Hill"));
+        itemData.add(new BasicNameValuePair("OHIbdUmeQwk", "Little Bo Peep"));
+        itemData.add(new BasicNameValuePair("bneJKq-ksjM", "Little Miss Muffet"));
+        itemData.add(new BasicNameValuePair("vTvNwAT29Lo", "London Bridge Is Falling Down"));
+        itemData.add(new BasicNameValuePair("u_K9hFxSvDM", "Mary Had A Little Lamb"));
+        itemData.add(new BasicNameValuePair("F3cedGb7lIo", "One, Two, Three, Four, Five"));
+        itemData.add(new BasicNameValuePair("Wlc6Mho-PxE", "Pat-a-cake, Pat-a-cake"));
+        itemData.add(new BasicNameValuePair("eh2Ud9KReWY", "Polly Put The Kettle On"));
+        itemData.add(new BasicNameValuePair("fv4kp4ZnSuE", "Pop goes the Weasel"));
+        itemData.add(new BasicNameValuePair("Izq1E6b4WlQ", "Rain Rain Go Away"));
+        itemData.add(new BasicNameValuePair("Tbf0cDiqr-U", "Ring a RIng o' Roses"));
+        itemData.add(new BasicNameValuePair("e66wIEbiMro", "Row, Row, Row Your Boat"));
+        itemData.add(new BasicNameValuePair("-ORqKcPJYDg", "Solomon Grundy"));
+        itemData.add(new BasicNameValuePair("tU85Kd-7bjM", "Star Light, Star Bright"));
+        itemData.add(new BasicNameValuePair("yCjJyiqpAuU", "Twinkle Twinkle Little Star"));
+        itemData.add(new BasicNameValuePair("-Xui9N1xjUM", "The Muffin Man"));
+        
         list = (ListView)findViewById(R.id.listRhymes);
-        adapter = new LazyAdapter(this, mStrings);
+        adapter = new LazyAdapter(this, itemData);
+        //adapter = new LazyAdapter(this, mStrings);
         list.setAdapter(adapter);
     }
 
@@ -91,6 +129,14 @@ public class MainActivity extends ActionBarActivity {
     }
     
     
+    /*    
+    private HashMap<String, String> createRhymeMap(String key, String name) {
+    	    HashMap<String, String> planet = new HashMap<String, String>();
+    	    planet.put(key, name);
+    	    return planet;
+    }
+
+
     private String[] mStrings={
             "http://img.youtube.com/vi/K3YQsmznd4c/default.jpg",
             "http://img.youtube.com/vi/gBEHFFnV3RY/default.jpg",
@@ -120,5 +166,5 @@ public class MainActivity extends ActionBarActivity {
             "http://img.youtube.com/vi/LrM62pv56o0/default.jpg",
             "http://img.youtube.com/vi/yCjJyiqpAuU/default.jpg",
             "http://img.youtube.com/vi/-Xui9N1xjUM/default.jpg"
-    };
+    }; */
 }
