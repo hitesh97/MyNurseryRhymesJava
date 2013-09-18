@@ -16,33 +16,29 @@
 
 package com.Akruti.Android.NurseryRhymes;
 
+import java.util.*;
 import com.Akruti.Android.NurseryRhymes.R;
+import com.fedorvlasov.lazylist.LazyAdapter;
 
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.*;
 
 public class MainActivity extends ActionBarActivity {
     private boolean mAlternateTitle = false;
-
+    LazyAdapter adapter;
+    ListView list;
+    
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        findViewById(R.id.toggle_title).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (mAlternateTitle) {
-                    setTitle(R.string.app_name);
-                } else {
-                    setTitle(R.string.alternate_title);
-                }
-                mAlternateTitle = !mAlternateTitle;
-            }
-        });
+        list = (ListView)findViewById(R.id.listRhymes);
+        adapter = new LazyAdapter(this, mStrings);
+        list.setAdapter(adapter);
     }
 
     @Override
@@ -85,4 +81,44 @@ public class MainActivity extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+    
+    @Override
+    public void onDestroy()
+    {
+        adapter.imageLoader.stopThread();
+        list.setAdapter(null);
+        super.onDestroy();
+    }
+    
+    
+    private String[] mStrings={
+            "http://img.youtube.com/vi/K3YQsmznd4c/default.jpg",
+            "http://img.youtube.com/vi/gBEHFFnV3RY/default.jpg",
+            "http://img.youtube.com/vi/Bhz2ycHGITw/default.jpg",
+            "http://img.youtube.com/vi/iqn7Qm3h1u0/default.jpg",
+            "http://img.youtube.com/vi/yyl8n-dzIk8/default.jpg",
+            "http://img.youtube.com/vi/SVPmtaHmL4g/default.jpg",
+            "http://img.youtube.com/vi/_RQDTNrC6lQ/default.jpg",
+            "http://img.youtube.com/vi/UneYkq0FzKA/default.jpg",
+            "http://img.youtube.com/vi/oODul5hgIl4/default.jpg",
+            "http://img.youtube.com/vi/icUSwG83ES8/default.jpg",
+            "http://img.youtube.com/vi/MBxeKG7_Hq4/default.jpg",
+            "http://img.youtube.com/vi/lsbFIYSK26E/default.jpg",
+            "http://img.youtube.com/vi/OHIbdUmeQwk/default.jpg",
+            "http://img.youtube.com/vi/bneJKq-ksjM/default.jpg",
+            "http://img.youtube.com/vi/vTvNwAT29Lo/default.jpg",
+            "http://img.youtube.com/vi/u_K9hFxSvDM/default.jpg",
+            "http://img.youtube.com/vi/F3cedGb7lIo/default.jpg",
+            "http://img.youtube.com/vi/Wlc6Mho-PxE/default.jpg",
+            "http://img.youtube.com/vi/eh2Ud9KReWY/default.jpg",
+            "http://img.youtube.com/vi/fv4kp4ZnSuE/default.jpg",
+            "http://img.youtube.com/vi/Izq1E6b4WlQ/default.jpg",
+            "http://img.youtube.com/vi/Tbf0cDiqr-U/default.jpg",
+            "http://img.youtube.com/vi/e66wIEbiMro/default.jpg",
+            "http://img.youtube.com/vi/-ORqKcPJYDg/default.jpg",
+            "http://img.youtube.com/vi/tU85Kd-7bjM/default.jpg",
+            "http://img.youtube.com/vi/LrM62pv56o0/default.jpg",
+            "http://img.youtube.com/vi/yCjJyiqpAuU/default.jpg",
+            "http://img.youtube.com/vi/-Xui9N1xjUM/default.jpg"
+    };
 }
