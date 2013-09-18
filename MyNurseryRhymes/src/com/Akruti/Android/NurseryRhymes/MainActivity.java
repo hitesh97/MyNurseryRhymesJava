@@ -22,7 +22,7 @@ import org.apache.http.message.BasicNameValuePair;
 
 import com.Akruti.Android.NurseryRhymes.R;
 import com.fedorvlasov.lazylist.LazyAdapter;
-
+import com.google.ads.*;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -32,10 +32,9 @@ import android.widget.*;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class MainActivity extends ActionBarActivity {
+	private static final String AdMob_Ad_Unit = "a15230e2197d0d0";
+	private AdView adView;
 	private List<BasicNameValuePair> itemData = new ArrayList<BasicNameValuePair>();
-	//BasicNameValuePair pairs = new BasicNameValuePair("","");
-	
-	
     private boolean mAlternateTitle = false;
     LazyAdapter adapter;
     ListView list;
@@ -43,9 +42,15 @@ public class MainActivity extends ActionBarActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+        adView = new AdView(this, AdSize.BANNER, AdMob_Ad_Unit); 
+        LinearLayout layout = (LinearLayout)findViewById(R.id.mainLinear);
+        layout.addView(adView, 0);
+        AdRequest request = new AdRequest();
+        request.addTestDevice(request.TEST_EMULATOR);
+        request.addTestDevice("00194a163e3f5e");
+        adView.loadAd(request);
         
-
-
         itemData.add(new BasicNameValuePair("K3YQsmznd4c", "A B C D E F G"));
         itemData.add(new BasicNameValuePair("gBEHFFnV3RY", "Baa Baa Black Sheep"));
         itemData.add(new BasicNameValuePair("Bhz2ycHGITw", "Diddle, Diddle, Dumpling, My Son John"));
@@ -87,6 +92,7 @@ public class MainActivity extends ActionBarActivity {
         	}
         	
         });
+
     }
 
     @Override

@@ -22,4 +22,5 @@
     <item type="id" name="menu_refresh" />
     <item type="id" name="itemText" />
     <item type="id" name="itemImage" />
+    <item type="id" name="mainLinear" />
 </resources>
