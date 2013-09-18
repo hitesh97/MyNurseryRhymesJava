@@ -60,6 +60,7 @@ public class LazyAdapter extends BaseAdapter {
         text.setText(itemMap.getValue());
         
         ImageView image=(ImageView)vi.findViewById(R.id.image);
+        image.setTag(itemMap.getName());
         imageLoader.DisplayImage(imageUrl, activity, image);
 
         return vi;
