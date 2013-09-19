@@ -43,15 +43,13 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        adView = new AdView(this, AdSize.BANNER, AdMob_Ad_Unit); 
-        LinearLayout layout = (LinearLayout)findViewById(R.id.mainLinear);
-        layout.addView(adView, 0);
-        AdRequest request = new AdRequest();
-        request.addTestDevice(request.TEST_EMULATOR);
-        request.addTestDevice("00194a163e3f5e");
-        adView.loadAd(request);
+        createAdView();
         
-        itemData.add(new BasicNameValuePair("K3YQsmznd4c", "A B C D E F G"));
+        populateRhymes();
+    }
+
+	private void populateRhymes() {
+		itemData.add(new BasicNameValuePair("K3YQsmznd4c", "A B C D E F G"));
         itemData.add(new BasicNameValuePair("gBEHFFnV3RY", "Baa Baa Black Sheep"));
         itemData.add(new BasicNameValuePair("Bhz2ycHGITw", "Diddle, Diddle, Dumpling, My Son John"));
         itemData.add(new BasicNameValuePair("iqn7Qm3h1u0", "Doctor Foster went to Gloucester"));
@@ -91,9 +89,18 @@ public class MainActivity extends ActionBarActivity {
         		Toast.makeText(getApplicationContext(), "item selected... : "+ videoId, Toast.LENGTH_SHORT).show();
         	}
         	
-        });
+        });        
+	}
 
-    }
+	private void createAdView() {
+		adView = new AdView(this, AdSize.BANNER, AdMob_Ad_Unit); 
+        LinearLayout layout = (LinearLayout)findViewById(R.id.mainLinear);
+        layout.addView(adView, 0);
+        AdRequest request = new AdRequest();
+        request.addTestDevice(request.TEST_EMULATOR);
+        request.addTestDevice("00194a163e3f5e");
+        adView.loadAd(request);
+	}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
