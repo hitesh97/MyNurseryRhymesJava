@@ -41,7 +41,8 @@ public class MainActivity extends ActionBarActivity {
 	private List<BasicNameValuePair> itemData = new ArrayList<BasicNameValuePair>();
     private boolean mAlternateTitle = false;
     LazyAdapter adapter;
-    ListView list;
+    //ListView list;
+    GridView list;
     
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,7 +82,8 @@ public class MainActivity extends ActionBarActivity {
         itemData.add(new BasicNameValuePair("yCjJyiqpAuU", "Twinkle Twinkle Little Star"));
         itemData.add(new BasicNameValuePair("-Xui9N1xjUM", "The Muffin Man"));
         
-        list = (ListView)findViewById(R.id.listRhymes);
+        //list = (ListView)findViewById(R.id.listRhymes);
+        list = (GridView)findViewById(R.id.listRhymes);
         adapter = new LazyAdapter(this, itemData);
         //adapter = new LazyAdapter(this, mStrings);
         list.setAdapter(adapter);
