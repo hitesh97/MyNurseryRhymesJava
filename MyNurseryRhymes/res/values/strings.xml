@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   Copyright 2011 The Android Open Source Project
 
@@ -12,14 +13,18 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
-  -->
+-->
 
 <resources>
+	<string name="videoId">videoId</string>
     <string name="app_name">Nursery Rhymes</string>
     <string name="alternate_title">My Nursery Rhymes</string>
     <string name="toggle_title">Toggle title</string>
-
     <string name="menu_refresh">Refresh</string>
     <string name="menu_search">Search</string>
     <string name="menu_share">Share</string>
+    <string name="title_activity_video_player">VideoPlayerActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
 </resources>

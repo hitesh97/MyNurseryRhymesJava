@@ -32,10 +32,19 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
+        public static final int buttonBarButtonStyle=0x7f010007;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int buttonBarStyle=0x7f010006;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
         public static final int maskDrawable=0x7f010004;
     }
     public static final class color {
         public static final int actionbar_title_color=0x7f040000;
+        public static final int black_overlay=0x7f040001;
     }
     public static final class dimen {
         public static final int actionbar_compat_button_home_width=0x7f050002;
@@ -60,33 +69,40 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int actionbar_compat_item_refresh=0x7f060003;
         public static final int actionbar_compat_item_refresh_progress=0x7f060002;
         public static final int actionbar_compat_title=0x7f060001;
+        public static final int fullscreen_content=0x7f060008;
+        public static final int fullscreen_content_controls=0x7f060009;
         public static final int itemImage=0x7f060006;
         public static final int itemText=0x7f060005;
-        public static final int listRhymes=0x7f060008;
+        public static final int listRhymes=0x7f06000a;
         public static final int mainLinear=0x7f060007;
         public static final int menu_refresh=0x7f060004;
-        public static final int menu_search=0x7f060009;
-        public static final int menu_share=0x7f06000a;
+        public static final int menu_search=0x7f06000b;
+        public static final int menu_share=0x7f06000c;
     }
     public static final class layout {
         public static final int actionbar_compat=0x7f030000;
         public static final int actionbar_indeterminate_progress=0x7f030001;
-        public static final int item=0x7f030002;
-        public static final int main=0x7f030003;
+        public static final int activity_video_player=0x7f030002;
+        public static final int item=0x7f030003;
+        public static final int main=0x7f030004;
     }
     public static final class menu {
         public static final int main=0x7f090000;
     }
     public static final class string {
-        public static final int alternate_title=0x7f070001;
-        public static final int app_name=0x7f070000;
-        public static final int menu_refresh=0x7f070003;
-        public static final int menu_search=0x7f070004;
-        public static final int menu_share=0x7f070005;
-        public static final int toggle_title=0x7f070002;
+        public static final int alternate_title=0x7f070002;
+        public static final int app_name=0x7f070001;
+        public static final int dummy_button=0x7f070008;
+        public static final int dummy_content=0x7f070009;
+        public static final int menu_refresh=0x7f070004;
+        public static final int menu_search=0x7f070005;
+        public static final int menu_share=0x7f070006;
+        public static final int title_activity_video_player=0x7f070007;
+        public static final int toggle_title=0x7f070003;
+        public static final int videoId=0x7f070000;
     }
     public static final class style {
-        public static final int ActionBar=0x7f080008;
+        public static final int ActionBar=0x7f08000b;
         public static final int ActionBarCompat=0x7f080001;
         public static final int ActionBarCompatHomeItem=0x7f080007;
         public static final int ActionBarCompatItem=0x7f080006;
@@ -94,8 +110,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ActionBarCompatProgressIndicator=0x7f080003;
         public static final int ActionBarCompatTitle=0x7f080005;
         public static final int ActionBarCompatTitleBase=0x7f080004;
-        public static final int ActionBarTitle=0x7f080009;
+        public static final int ActionBarTitle=0x7f08000c;
         public static final int AppTheme=0x7f080000;
+        public static final int ButtonBar=0x7f080009;
+        public static final int ButtonBarButton=0x7f08000a;
+        public static final int FullscreenActionBarStyle=0x7f08000d;
+        public static final int FullscreenTheme=0x7f080008;
     }
     public static final class styleable {
         /** Attributes that can be used with a AppTheme.
@@ -192,5 +212,40 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           @attr name android:maskDrawable
         */
         public static final int BezelImageView_maskDrawable = 0;
+        /** Attributes that can be used with a ButtonBarContainerTheme.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ButtonBarContainerTheme_buttonBarButtonStyle com.Akruti.Android.NurseryRhymes:buttonBarButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ButtonBarContainerTheme_buttonBarStyle com.Akruti.Android.NurseryRhymes:buttonBarStyle}</code></td><td></td></tr>
+           </table>
+           @see #ButtonBarContainerTheme_buttonBarButtonStyle
+           @see #ButtonBarContainerTheme_buttonBarStyle
+         */
+        public static final int[] ButtonBarContainerTheme = {
+            0x7f010006, 0x7f010007
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.Akruti.Android.NurseryRhymes.R.attr#buttonBarButtonStyle}
+          attribute's value can be found in the {@link #ButtonBarContainerTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:buttonBarButtonStyle
+        */
+        public static final int ButtonBarContainerTheme_buttonBarButtonStyle = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.Akruti.Android.NurseryRhymes.R.attr#buttonBarStyle}
+          attribute's value can be found in the {@link #ButtonBarContainerTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:buttonBarStyle
+        */
+        public static final int ButtonBarContainerTheme_buttonBarStyle = 0;
     };
 }

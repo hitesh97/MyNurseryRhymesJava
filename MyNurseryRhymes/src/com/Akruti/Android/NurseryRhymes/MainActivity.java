@@ -23,6 +23,10 @@ import org.apache.http.message.BasicNameValuePair;
 import com.Akruti.Android.NurseryRhymes.R;
 import com.fedorvlasov.lazylist.LazyAdapter;
 import com.google.ads.*;
+import com.keyes.youtube.OpenYouTubePlayerActivity;
+
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -86,7 +90,10 @@ public class MainActivity extends ActionBarActivity {
         		//String videoName = ((TextView) myView.findViewById(R.id.itemText)).getText().toString();
         		//Toast.makeText(getApplicationContext(), "item selected... : "+ videoId, Toast.LENGTH_SHORT).show();
         		String videoId = ((ImageView) myView.findViewById(R.id.itemImage)).getTag().toString();
-        		Toast.makeText(getApplicationContext(), "item selected... : "+ videoId, Toast.LENGTH_SHORT).show();
+        		//Toast.makeText(getApplicationContext(), "item selected... : "+ videoId, Toast.LENGTH_SHORT).show();
+        	    
+        		Intent lVideoIntent = new Intent(null, Uri.parse("ytv://"+videoId), MainActivity.this, OpenYouTubePlayerActivity.class);
+                startActivity(lVideoIntent);
         	}
         	
         });        

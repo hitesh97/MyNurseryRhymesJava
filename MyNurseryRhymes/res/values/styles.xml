@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   Copyright 2011 The Android Open Source Project
 
@@ -12,7 +13,7 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
-  -->
+-->
 
 <resources>
 
@@ -33,6 +34,7 @@
     </style>
 
     <style name="ActionBarCompatItemBase">
+
         <!-- layout_width/height must be set in code -->
         <item name="android:scaleType">center</item>
         <item name="android:background">@drawable/actionbar_compat_item</item>
@@ -57,10 +59,25 @@
         <item name="android:textColor">@color/actionbar_title_color</item>
     </style>
 
-    <style name="ActionBarCompatItem" parent="style/ActionBarCompatItemBase">
+    <style name="ActionBarCompatItem" parent="style/ActionBarCompatItemBase"></style>
+
+    <style name="ActionBarCompatHomeItem" parent="style/ActionBarCompatItemBase"></style>
+
+    <style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="buttonBarStyle">@style/ButtonBar</item>
+        <item name="buttonBarButtonStyle">@style/ButtonBarButton</item>
     </style>
 
-    <style name="ActionBarCompatHomeItem" parent="style/ActionBarCompatItemBase">
+    <style name="ButtonBar">
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:background">@android:drawable/bottom_bar</item>
     </style>
+
+    <style name="ButtonBarButton" />
 
 </resources>
