@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   Copyright 2011 The Android Open Source Project
 
@@ -12,10 +13,14 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
-  -->
+-->
 
 <resources>
+
     <dimen name="actionbar_compat_height">48dp</dimen>
     <dimen name="actionbar_compat_button_width">48dp</dimen>
     <dimen name="actionbar_compat_button_home_width">56dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
 </resources>

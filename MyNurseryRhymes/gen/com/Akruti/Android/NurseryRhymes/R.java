@@ -50,54 +50,64 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int actionbar_compat_button_home_width=0x7f050002;
         public static final int actionbar_compat_button_width=0x7f050001;
         public static final int actionbar_compat_height=0x7f050000;
+        /** 
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
+    
+         */
+        public static final int activity_horizontal_margin=0x7f050003;
+        public static final int activity_vertical_margin=0x7f050004;
     }
     public static final class drawable {
         public static final int actionbar_compat_item=0x7f020000;
         public static final int actionbar_compat_item_focused=0x7f020001;
         public static final int actionbar_compat_item_pressed=0x7f020002;
         public static final int actionbar_shadow=0x7f020003;
-        public static final int ic_action_refresh=0x7f020004;
-        public static final int ic_action_search=0x7f020005;
-        public static final int ic_action_share=0x7f020006;
-        public static final int ic_home=0x7f020007;
-        public static final int ic_launcher=0x7f020008;
-        public static final int ic_menu_share=0x7f020009;
-        public static final int stub=0x7f02000a;
+        public static final int ic_action_settings=0x7f020004;
+        public static final int ic_home=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int stub=0x7f020007;
     }
     public static final class id {
+        public static final int action_settings=0x7f06000d;
         public static final int actionbar_compat=0x7f060000;
         public static final int actionbar_compat_item_refresh=0x7f060003;
         public static final int actionbar_compat_item_refresh_progress=0x7f060002;
         public static final int actionbar_compat_title=0x7f060001;
-        public static final int fullscreen_content=0x7f060008;
-        public static final int fullscreen_content_controls=0x7f060009;
+        public static final int fullscreen_content=0x7f06000a;
+        public static final int fullscreen_content_controls=0x7f06000b;
         public static final int itemImage=0x7f060006;
         public static final int itemText=0x7f060005;
-        public static final int listRhymes=0x7f06000a;
+        public static final int listRhymes=0x7f06000c;
         public static final int mainLinear=0x7f060007;
         public static final int menu_refresh=0x7f060004;
-        public static final int menu_search=0x7f06000b;
-        public static final int menu_share=0x7f06000c;
+        public static final int menu_settings=0x7f060008;
+        public static final int webView1=0x7f060009;
     }
     public static final class layout {
         public static final int actionbar_compat=0x7f030000;
         public static final int actionbar_indeterminate_progress=0x7f030001;
-        public static final int activity_video_player=0x7f030002;
-        public static final int item=0x7f030003;
-        public static final int main=0x7f030004;
+        public static final int activity_terms=0x7f030002;
+        public static final int activity_video_player=0x7f030003;
+        public static final int item=0x7f030004;
+        public static final int main=0x7f030005;
     }
     public static final class menu {
         public static final int main=0x7f090000;
+        public static final int terms=0x7f090001;
     }
     public static final class string {
+        public static final int action_settings=0x7f07000c;
         public static final int alternate_title=0x7f070002;
         public static final int app_name=0x7f070001;
-        public static final int dummy_button=0x7f070008;
-        public static final int dummy_content=0x7f070009;
+        public static final int dummy_button=0x7f070009;
+        public static final int dummy_content=0x7f07000a;
         public static final int menu_refresh=0x7f070004;
         public static final int menu_search=0x7f070005;
+        public static final int menu_settings=0x7f070007;
         public static final int menu_share=0x7f070006;
-        public static final int title_activity_video_player=0x7f070007;
+        public static final int title_activity_terms=0x7f07000b;
+        public static final int title_activity_video_player=0x7f070008;
         public static final int toggle_title=0x7f070003;
         public static final int videoId=0x7f070000;
     }

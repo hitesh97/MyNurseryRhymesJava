@@ -23,4 +23,6 @@
     <item type="id" name="itemText" />
     <item type="id" name="itemImage" />
     <item type="id" name="mainLinear" />
+    <item type="id" name="menu_settings" />
+    <item type="id" name="webView1" />
 </resources>
