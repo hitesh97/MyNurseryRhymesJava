@@ -97,7 +97,6 @@ public class MainActivity extends ActionBarActivity {
         		Intent lVideoIntent = new Intent(null, Uri.parse("ytv://"+videoId), MainActivity.this, OpenYouTubePlayerActivity.class);
                 startActivity(lVideoIntent);
         	}
-        	
         });        
 	}
 
