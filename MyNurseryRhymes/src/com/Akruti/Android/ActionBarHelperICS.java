@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.Akruti.Android.NurseryRhymes;
+package com.Akruti.Android;
 
 import android.app.Activity;
 import android.content.Context;
@@ -22,7 +22,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 /**
- * An extension of {@link com.Akruti.Android.NurseryRhymes.ActionBarHelper} that provides Android
+ * An extension of {@link com.Akruti.Android.ActionBarHelper} that provides Android
  * 4.0-specific functionality for IceCreamSandwich devices. It thus requires API level 14.
  */
 public class ActionBarHelperICS extends ActionBarHelperHoneycomb {

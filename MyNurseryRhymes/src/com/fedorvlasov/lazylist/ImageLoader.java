@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.Stack;
 import java.util.WeakHashMap;
 
-import com.Akruti.Android.NurseryRhymes.R;
+import com.Akruti.Android.R;
 
 import android.app.Activity;
 import android.content.Context;
@@ -34,7 +34,7 @@ public class ImageLoader {
         fileCache=new FileCache(context);
     }
     
-    final int stub_id=R.drawable.stub;
+    final int stub_id=com.Akruti.Android.R.drawable.stub;
     public void DisplayImage(String url, Activity activity, ImageView imageView)
     {
         imageViews.put(imageView, url);

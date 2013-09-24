@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.Akruti.Android.NurseryRhymes;
+package com.Akruti.Android;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
-import com.Akruti.Android.NurseryRhymes.R;
+import com.Akruti.Android.R;
 
 import android.app.Activity;
 import android.content.Context;
@@ -165,7 +165,7 @@ public class ActionBarHelperBase extends ActionBarHelper {
      * Adds an action button to the compatibility action bar, using menu information from a {@link
      * android.view.MenuItem}. If the menu item ID is <code>menu_refresh</code>, the menu item's
      * state can be changed to show a loading spinner using
-     * {@link com.Akruti.Android.NurseryRhymes.ActionBarHelperBase#setRefreshActionItemState(boolean)}.
+     * {@link com.Akruti.Android.ActionBarHelperBase#setRefreshActionItemState(boolean)}.
      */
     private View addActionItemCompatFromMenuItem(final MenuItem item) {
         final int itemId = item.getItemId();

@@ -4,7 +4,7 @@ package com.fedorvlasov.lazylist;
 import java.util.List;
 import java.util.Map;
 import org.apache.http.message.BasicNameValuePair;
-import com.Akruti.Android.NurseryRhymes.R;
+import com.Akruti.Android.R;
 
 import android.app.Activity;
 import android.content.Context;
@@ -50,16 +50,16 @@ public class LazyAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View vi=convertView;
         if(convertView==null)
-            vi = inflater.inflate(R.layout.item, null);
+            vi = inflater.inflate(com.Akruti.Android.R.layout.item, null);
 
         BasicNameValuePair itemMap = (BasicNameValuePair)data.get(position);
         String sampleUrl = youtubeSampleUrl;
         String imageUrl = sampleUrl.replace("{0}", itemMap.getName()) ;
         
-        TextView text=(TextView)vi.findViewById(R.id.itemText);;
+        TextView text=(TextView)vi.findViewById(com.Akruti.Android.R.id.itemText);;
         text.setText(itemMap.getValue());
         
-        ImageView image=(ImageView)vi.findViewById(R.id.itemImage);
+        ImageView image=(ImageView)vi.findViewById(com.Akruti.Android.R.id.itemImage);
         image.setTag(itemMap.getName());
         imageLoader.DisplayImage(imageUrl, activity, image);
 

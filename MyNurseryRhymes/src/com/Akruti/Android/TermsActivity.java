@@ -1,4 +1,4 @@
-package com.Akruti.Android.NurseryRhymes;
+package com.Akruti.Android;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -23,7 +23,7 @@ public class TermsActivity extends Activity {
 		setupActionBar();
 		
 		WebView webView = (WebView) findViewById(R.id.webView1);
-		webView.getSettings().setJavaScriptEnabled(true);
+		//webView.getSettings().setJavaScriptEnabled(true);
 		//webView.loadUrl("http://www.google.com");
 		 // To load text file
 		AssetManager assetManager = getAssets();

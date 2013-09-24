@@ -14,9 +14,7 @@
  * limitations under the License.
  */
 
-package com.Akruti.Android.NurseryRhymes;
-
-import com.Akruti.Android.NurseryRhymes.R;
+package com.Akruti.Android;
 
 import android.app.Activity;
 import android.content.Context;

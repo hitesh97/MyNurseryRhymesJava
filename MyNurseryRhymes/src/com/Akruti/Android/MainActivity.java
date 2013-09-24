@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.Akruti.Android.NurseryRhymes;
+package com.Akruti.Android;
 
 import java.util.*;
 
 import org.apache.http.message.BasicNameValuePair;
 
-import com.Akruti.Android.NurseryRhymes.R;
+import com.Akruti.Android.R;
 import com.fedorvlasov.lazylist.LazyAdapter;
 import com.google.ads.*;
 import com.keyes.youtube.OpenYouTubePlayerActivity;
